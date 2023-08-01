@@ -10,20 +10,20 @@
         <meta name="author" content="Kaichen Xu">
       
       
-        <link rel="canonical" href="https://Catchxu.github.io/OBDC-GAN-tutorial/API/Outlier/Detect_SRT/">
+        <link rel="canonical" href="https://Catchxu.github.io/OBDC-GAN-tutorial/API/Dataset/Build_multi_graph/">
       
       
-        <link rel="prev" href="../Detect_SC/">
+        <link rel="prev" href="../Build_graph/">
       
       
-        <link rel="next" href="../../../Tutorial/Tutorial_overview/">
+        <link rel="next" href="../../Pretrain/Pretrain_SC/">
       
       <link rel="icon" href="../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>og.detect.Detect_SRT - ODBC-GAN</title>
+        <title>og._dataset.Build_multi_graph - ODBC-GAN</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ogdetectdetect_srt" class="md-skip">
+        <a href="#og_datasetbuild_multi_graph" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              og.detect.Detect_SRT
+              og._dataset.Build_multi_graph
             
           </span>
         </div>
@@ -376,16 +376,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
       
       
         
@@ -400,7 +402,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Dataset
@@ -413,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dataset/Build_graph/" class="md-nav__link">
+      <a href="../Build_graph/" class="md-nav__link">
         og._dataset.Build_graph
       </a>
     </li>
@@ -425,11 +427,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Dataset/Build_multi_graph/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         og._dataset.Build_multi_graph
       </a>
+      
     </li>
   
 
@@ -500,18 +512,16 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
         
@@ -528,7 +538,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           Outlier Detection
@@ -541,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outlier_detect/" class="md-nav__link">
+      <a href="../../Outlier/outlier_detect/" class="md-nav__link">
         og.outlier_detect
       </a>
     </li>
@@ -555,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Detect_SC/" class="md-nav__link">
+      <a href="../../Outlier/Detect_SC/" class="md-nav__link">
         og.detect.Detect_SC
       </a>
     </li>
@@ -567,21 +577,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Outlier/Detect_SRT/" class="md-nav__link">
         og.detect.Detect_SRT
       </a>
-      
     </li>
   
 
@@ -702,136 +702,64 @@
                   
 
 
-<h1 id="ogdetectdetect_srt">og.detect.Detect_SRT<a class="headerlink" href="#ogdetectdetect_srt" title="Permanent link">&para;</a></h1>
+<h1 id="og_datasetbuild_multi_graph">og._dataset.Build_multi_graph<a class="headerlink" href="#og_datasetbuild_multi_graph" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Class</p>
-<p><div id = 'SRT'><b>og.detect.Detect_SRT(<i>n_epochs=2, learning_rate=7e-6, sample_rate=1, mem_dim=1024, update_size=64, shrink_thres=0.5, temperature=3, n_critic=1, pretrain=True, GPU=True, verbose=True, log_interval=100, random_state=100, weight=None, batch_size=64, patch_size=48, MultiResSkips=True</i>)</b></div></p>
+<p><b>og._dataset.Build_multi_graph(<i>adata, image, n_neighbors=3, patch_size=48, train_mode=True</i>)</b></p>
 </div>
-<p>Detect outlier spots as SRT mode of ODBC-GAN.</p>
-<p><code>Detect_SRT</code> has two important functions <a href="#fit">fit</a> and <a href="#predict">predict</a>. This class has been integrated in <a href="../outlier_detect/">og.outlier_detect</a> as SRT mode.</p>
+<p>Build a graph for multi-sample spatial transcriptomics data by <a href="https://www.dgl.ai/">dgl</a>.</p>
+<p>Graph is contained in attribute <code>g</code>.</p>
 <p><strong>Parameters</strong>:</p>
 <ul>
 <li>
-<p><strong>n_epochs</strong>: <code>int</code> (default: <code>2</code>)</p>
-<p>Number of train epochs.</p>
+<p><strong>adata</strong>: <code>List[anndata.AnnData]</code></p>
+<p>List of input adata. Every adata has the same genes.</p>
 </li>
 <li>
-<p><strong>learning_rate</strong>: <code>float</code> (default: <code>7e-6</code>)</p>
-<p>Learning rate for Adam optim.</p>
+<p><strong>image</strong>: <code>List[numpy.ndarray]</code></p>
+<p>List of input H&amp;E images.</p>
 </li>
 <li>
-<p><strong>sample_rate</strong>: <code>float</code> (default: <code>1</code>)</p>
-<p>Proportion of the actual train data to the input train data. Consider taking a smaller <code>sample_rare</code> when input train data is large-scale.</p>
-</li>
-<li>
-<p><strong>mem_dim</strong>: <code>float</code> (default: <code>1024</code>)</p>
-<p>Number of embeddings stored in the memory bank. Larger <code>mem_dim</code> doesn't always mean better results, which means ODBC-GAN is insensitive to the size of memory bank.</p>
-</li>
-<li>
-<p><strong>update_size</strong>: <code>int</code> (default: <code>64</code>)</p>
-<p>Number of embeddings updated in every epoch.</p>
-</li>
-<li>
-<p><strong>shrink_thres</strong>: <code>float</code> (default: <code>0.5</code>)</p>
-<p>Shrinkage threshold for attention score in the memory unit.</p>
-</li>
-<li>
-<p><strong>temperature</strong>: <code>float</code> (default: <code>3</code>)</p>
-<p>Temperature hyperparameter for attention score in the memory unit.</p>
-</li>
-<li>
-<p><strong>n_critic</strong>: <code>int</code> (default: <code>1</code>)</p>
-<p>Number of times the discriminator is updated in a epoch. Moreover, generator is only updated once in a epoch.</p>
-</li>
-<li>
-<p><strong>pretrain</strong>: <code>bool</code> (default: <code>True</code>)</p>
-<p>If <code>True</code>, load pretrained weight for ODBC-GAN.</p>
-</li>
-<li>
-<p><strong>GPU</strong>: <code>bool</code> (default: <code>True</code>)</p>
-<p>If <code>True</code>, run ODBC-GAN on GPU.</p>
-</li>
-<li>
-<p><strong>verbose</strong>: <code>bool</code> (default: <code>True</code>)</p>
-<p>If <code>True</code>, print detailed information of every epoch.</p>
-</li>
-<li>
-<p><strong>log_interval</strong>: <code>int</code> (default: <code>100</code>)</p>
-<p>Interval of epochs between two adjacent printed information.</p>
-</li>
-<li>
-<p><strong>random_state</strong>: <code>int</code> (default: <code>100</code>)</p>
-<p>Random state to control all kinds of random seeds.</p>
-</li>
-<li>
-<p><strong>weight</strong>: <code>Optional[dict]</code> (default: <code>None</code>)</p>
-<p>Weight for every part of loss. If <code>None</code>, <code>weight</code> should be set as <code>{'w_rec': 50, 'w_adv': 1, 'w_enc': 1, 'w_gp': 10}</code></p>
-</li>
-<li>
-<p><strong>batch_size</strong>: <code>int</code> (default: <code>64</code>)</p>
-<p>Batch size of train data.</p>
+<p><strong>n_neighbors</strong>: <code>int</code> (default: <code>3</code>)</p>
+<p>Number of neighbors to generate adjacency matrix.</p>
 </li>
 <li>
 <p><strong>patch_size</strong>: <code>int</code> (default: <code>48</code>)</p>
 <p>Side length of every patch.</p>
 </li>
 <li>
-<p><strong>MultiResSkips</strong>: <code>bool</code> (default: <code>True</code>)</p>
-<p>If <code>True</code>, use Multi-Residual-Block Skips in image generator.</p>
+<p><strong>train_mode</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, patches will pass through color jitter, random horizontal flip, and random rotation.</p>
 </li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Function of <a href="#SRT">og.detect.Detect_SRT</a></p>
-<p><div id = 'fit'><b>fit(<i>train, image</i>)</b></div></p>
+<p><strong>Attributes</strong>:</p>
+<ul>
+<li>
+<p><strong>g</strong>: <code>dgl.Graph</code></p>
+<p>Graph object built.</p>
+<p>Nodes are the observations in <code>adata</code>.</p>
+<p>Edges indicate how close the two observations' positions are.</p>
+<p><code>g.ndata['patch']</code>, image patch of every spot.</p>
+<p><code>g.ndata['x']</code>, gene expression vector of every spot.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If in pre-training, <code>train_mode=True</code> can provide data augmentation to train your model.</p>
 </div>
-<p>Learn information of normal spots on train data by mini-batch.</p>
-<p>Full graph of train data is generated by <a href="../../Dataset/Build_graph/">og._dataset.Build_graph</a>.</p>
-<p>Every batch is a subgraph on the full graph, provided by <a href="https://docs.dgl.ai/en/latest/generated/dgl.dataloading.DataLoader.html">dgl.dataloading.DataLoader</a>.</p>
-<p><strong>Parameters</strong>:</p>
-<ul>
-<li>
-<p><strong>train</strong>: <code>anndata.AnnData</code></p>
-<p>Train data of shape <code>n_obs</code> × <code>n_vars</code>. Rows correspond to cells and columns to genes.</p>
-</li>
-<li>
-<p><strong>image</strong>: <code>numpy.ndarray</code></p>
-<p>H&amp;E image of train data.</p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Function of <a href="#SRT">og.detect.Detect_SRT</a></p>
-<p><div id = 'predict'><b>predict(<i>test</i>, image)</b></div></p>
-</div>
-<p>Detect outlier spots on test data by mini-batch.</p>
-<p>Full graph of test data is generated by <a href="../../Dataset/Build_graph/">og._dataset.Build_graph</a>.</p>
-<p>Every batch is a subgraph on the full graph, provided by <a href="https://docs.dgl.ai/en/latest/generated/dgl.dataloading.DataLoader.html">dgl.dataloading.DataLoader</a>.</p>
-<p><strong>Parameters</strong>:</p>
-<ul>
-<li>
-<p><strong>test</strong>: <code>anndata.AnnData</code></p>
-<p>Test data of shape <code>n_obs</code> × <code>n_vars</code>. Rows correspond to cells and columns to genes.</p>
-</li>
-<li>
-<p><strong>image</strong>: <code>numpy.ndarray</code></p>
-<p>H&amp;E image of test data.</p>
-</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<ul>
-<li>
-<p><strong>result</strong>: <code>pandas.DataFrame</code></p>
-<p>Results of outlier detection. <code>result['cell_idx']</code> contains <code>test.obs_names</code>, and <code>result['score']</code> contains the anomaly scores of every observation.</p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<ul>
-<li><a href="#fit">fit</a> must be run before <a href="#predict">predict</a>.</li>
-<li><code>train</code> and <code>test</code> should have the same genes.</li>
-<li><code>train_image</code> and <code>test_image</code> are required. And the position of every spot on image should contain in <code>train.obsm['spatial']</code> and <code>test.obsm['spatial']</code>.</li>
-<li>Default configuration is based on <code>pretrain=True</code>, which means fine-tuning ODBC-GAN. If <code>pretrain=False</code>, a set of new parameters is necessary.</li>
-</ul>
+<p>Every object in <code>adata</code> and <code>image</code> should be matched.</p>
 </div>
+<p><strong>Example</strong>:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">ODBCGAN._dataset</span> <span class="kn">import</span> <span class="n">Build_multi_graph</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">adata</span> <span class="o">=</span> <span class="p">[</span><span class="n">adata1</span><span class="p">,</span> <span class="n">adata2</span><span class="p">,</span> <span class="n">adata3</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">image1</span><span class="p">,</span> <span class="n">image2</span><span class="p">,</span> <span class="n">image3</span><span class="p">]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">builder</span> <span class="o">=</span> <span class="n">Build_multi_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">g</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">g</span>
+</span></code></pre></div></p>
 
 
 
@@ -858,7 +786,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Detect_SC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: og.detect.Detect_SC" rel="prev">
+          <a href="../Build_graph/" class="md-footer__link md-footer__link--prev" aria-label="Previous: og._dataset.Build_graph" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -867,20 +795,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                og.detect.Detect_SC
+                og._dataset.Build_graph
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../Tutorial/Tutorial_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <a href="../../Pretrain/Pretrain_SC/" class="md-footer__link md-footer__link--next" aria-label="Next: og._pretrain.Pretrain_SC" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                og._pretrain.Pretrain_SC
               </div>
             </div>
             <div class="md-footer__button md-icon">
