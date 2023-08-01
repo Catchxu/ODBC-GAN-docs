@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -365,10 +370,43 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Overview
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    Main functions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -464,6 +502,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -486,6 +526,20 @@
     <li class="md-nav__item">
       <a href="../Pretrain/Pretrain_SC/" class="md-nav__link">
         og._pretrain.Pretrain_SC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pretrain/Pretrain_SRT/" class="md-nav__link">
+        og._pretrain.Pretrain_SRT
       </a>
     </li>
   
@@ -677,6 +731,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    Main functions
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -691,9 +762,50 @@
                   
 
 
-  <h1>Overview</h1>
-
-
+<h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<p>Start the API documentation as:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">ODBCGAN</span> <span class="k">as</span> <span class="nn">og</span>
+</span></code></pre></div>
+<h2 id="main-functions">Main functions<a class="headerlink" href="#main-functions" title="Permanent link">&para;</a></h2>
+<p>ODBC-GAN has integrated different API to some main function. These main function can be used straightforward for implementing outlier detection, batch correction and subtypes detection by one-step.</p>
+<table>
+<thead>
+<tr>
+<th><center>API</center></th>
+<th><center>Description</center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Outlier/outlier_detect/"><code>og.outlier_detect(mode='SC')</code></a></td>
+<td>Detect outlier cells</td>
+</tr>
+<tr>
+<td><a href="../Outlier/outlier_detect/"><code>og.outlier_detect(mode='SRT')</code></a></td>
+<td>Detect outlier spots</td>
+</tr>
+<tr>
+<td><code>og.batch_correct(mode='SC')</code></td>
+<td>Correct batch effects among SC data</td>
+</tr>
+<tr>
+<td><code>og.batch_correct(mode='SRT', slice='Vertical')</code></td>
+<td>Correct batch effects among SRT (vertical) data</td>
+</tr>
+<tr>
+<td><code>og.batch_correct(mode='SRT', slice='Horizontal')</code></td>
+<td>Correct batch effects among SRT (horizontal) data</td>
+</tr>
+<tr>
+<td><code>og.subtype_detect(mode='SC')</code></td>
+<td>Detect subtypes of outlier cells</td>
+</tr>
+<tr>
+<td><code>og.subtype_detect(mode='SRT')</code></td>
+<td>Detect subtypes of outlier spots</td>
+</tr>
+</tbody>
+</table>
 
 
 

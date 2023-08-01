@@ -461,6 +461,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -483,6 +485,20 @@
     <li class="md-nav__item">
       <a href="../../Pretrain/Pretrain_SC/" class="md-nav__link">
         og._pretrain.Pretrain_SC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pretrain/Pretrain_SRT/" class="md-nav__link">
+        og._pretrain.Pretrain_SRT
       </a>
     </li>
   
@@ -760,7 +776,7 @@
 <p>Interval of epochs between two adjacent printed information.</p>
 </li>
 <li>
-<p><strong>random_state</strong>: <code>int</code> (default: <code>100</code>)</p>
+<p><strong>random_state</strong>: <code>Optional[int]</code> (default: <code>100</code>)</p>
 <p>Random state to control all kinds of random seeds.</p>
 </li>
 <li>
@@ -772,7 +788,7 @@
 <p class="admonition-title">Function of <a href="#SC">og.detect.Detect_SC</a></p>
 <p><div id = 'fit'><b>fit(<i>train</i>)</b></div></p>
 </div>
-<p>Learn information of normal cells on train data by full batch.</p>
+<p>Learn information of normal cells on train data by full-batch.</p>
 <p><strong>Parameters</strong>:</p>
 <ul>
 <li>
@@ -784,7 +800,7 @@
 <p class="admonition-title">Function of <a href="#SC">og.detect.Detect_SC</a></p>
 <p><div id = 'predict'><b>predict(<i>test</i>)</b></div></p>
 </div>
-<p>Detect outlier cells on test data.</p>
+<p>Detect outlier cells on test data by full-batch.</p>
 <p><strong>Parameters</strong>:</p>
 <ul>
 <li>

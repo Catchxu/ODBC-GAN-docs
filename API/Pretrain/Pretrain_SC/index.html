@@ -16,7 +16,7 @@
         <link rel="prev" href="../../Dataset/Build_multi_graph/">
       
       
-        <link rel="next" href="../../Outlier/outlier_detect/">
+        <link rel="next" href="../Pretrain_SRT/">
       
       <link rel="icon" href="../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
@@ -463,6 +463,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -496,6 +498,20 @@
         og._pretrain.Pretrain_SC
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pretrain_SRT/" class="md-nav__link">
+        og._pretrain.Pretrain_SRT
+      </a>
     </li>
   
 
@@ -703,6 +719,57 @@
 
 
 <h1 id="og_pretrainpretrain_sc">og._pretrain.Pretrain_SC<a class="headerlink" href="#og_pretrainpretrain_sc" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Function</p>
+<p><b>Pretrain_SC(<i>train, n_epochs=50, batch_size=32, learning_rate=0.0005, GPU=True, verbose=True, log_interval=10, random_state=None, norm_type='Batch'</i>)</b></p>
+</div>
+<p>Pretrain gene generator in SC mode by mini-batch.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li>
+<p><strong>train</strong>: <code>anndata.AnnData</code></p>
+<p>Train data of shape <code>n_obs</code> × <code>n_vars</code>. Rows correspond to cells and columns to genes.</p>
+</li>
+<li>
+<p><strong>n_epochs</strong>: <code>int</code> (default: <code>50</code>)</p>
+<p>Number of train epochs.</p>
+</li>
+<li>
+<p><strong>batch_size</strong>: <code>int</code> (default: <code>32</code>)</p>
+<p>Batch size of train data.</p>
+</li>
+<li>
+<p><strong>learning_rate</strong>: <code>float</code> (default: <code>0.0005</code>)</p>
+<p>Learning rate for Adam optim.</p>
+</li>
+<li>
+<p><strong>GPU</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, run ODBC-GAN on GPU.</p>
+</li>
+<li>
+<p><strong>verbose</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, print detailed information of every epoch.</p>
+</li>
+<li>
+<p><strong>log_interval</strong>: <code>int</code> (default: <code>10</code>)</p>
+<p>Interval of epochs between two adjacent printed information.</p>
+</li>
+<li>
+<p><strong>random_state</strong>: <code>Optional[int]</code> (default: <code>None</code>)</p>
+<p>Random state to control all kinds of random seeds.</p>
+</li>
+<li>
+<p><strong>norm_type</strong>: <code>Literal['Batch', 'Instance']</code> (default: <code>Batch</code>)</p>
+<p>Type of normalization layers. If <code>'Batch'</code>, batch normalization. If <code>'Instance'</code>, instance normalization.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>norm_type='Instance'</code> is suitable for batch correction task.</li>
+<li><code>norm_type='Batch'</code> is suitable for other tasks.</li>
+</ul>
+</div>
 
 
 
@@ -745,13 +812,13 @@
         
         
           
-          <a href="../../Outlier/outlier_detect/" class="md-footer__link md-footer__link--next" aria-label="Next: og.outlier_detect" rel="next">
+          <a href="../Pretrain_SRT/" class="md-footer__link md-footer__link--next" aria-label="Next: og._pretrain.Pretrain_SRT" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                og.outlier_detect
+                og._pretrain.Pretrain_SRT
               </div>
             </div>
             <div class="md-footer__button md-icon">

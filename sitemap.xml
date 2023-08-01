@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Pretrain/Pretrain_SRT/</loc>
+         <lastmod>2023-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/Tutorial/Outlier_SC/</loc>
          <lastmod>2023-08-01</lastmod>
          <changefreq>daily</changefreq>
