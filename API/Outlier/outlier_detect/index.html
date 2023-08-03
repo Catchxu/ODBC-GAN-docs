@@ -344,6 +344,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -642,6 +644,92 @@
 
             
           
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Subtype Detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Subtype Detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Subtype/subtype_detect/" class="md-nav__link">
+        og.subtype_detect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Subtype/Classify_SC/" class="md-nav__link">
+        og.detect.Classify_SC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Subtype/Classify_SRT/" class="md-nav__link">
+        og.detect.Classify_SRT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -757,7 +845,7 @@
 </div>
 <p>Detect outlier cells in SC mode, and outlier spots in SRT mode.</p>
 <p>Integrate two main classes <a href="../Detect_SC/">og.detect.Detect_SC</a> and <a href="../Detect_SRT/">og.detect.Detect_SRT</a> to implement outlier detection.</p>
-<p>Hyperparameters (<code>n_epochs</code>, <code>learning_rate</code>, and etc.) are allowed for changing the default configuration. Detailed hyperparameter description can be see in <a href="../Detect_SC/">og.detect.Detect_SC</a> and <a href="../Detect_SRT/">og.detect.Detect_SRT</a></p>
+<p>Hyperparameters (<code>n_epochs</code>, <code>learning_rate</code>, and etc.) are allowed for changing the default configuration. Detailed hyperparameter description can be see in <a href="../Detect_SC/">og.detect.Detect_SC</a> and <a href="../Detect_SRT/">og.detect.Detect_SRT</a>.</p>
 <p><strong>Parameters</strong>:</p>
 <ul>
 <li>
@@ -796,7 +884,7 @@
 <p class="admonition-title">Warning</p>
 <ul>
 <li><code>train</code> and <code>test</code> should have the same genes.</li>
-<li>In SRT mode, <code>train_image</code> and <code>test_image</code> are required. And the position of every spot on image should contain in <code>train.obsm['spatial']</code> and <code>test.obsm['spatial']</code></li>
+<li>In SRT mode, <code>train_image</code> and <code>test_image</code> are required. And the position of every spot on image should contain in <code>train.obsm['spatial']</code> and <code>test.obsm['spatial']</code>.</li>
 </ul>
 </div>
 <p><strong>Example</strong>:
