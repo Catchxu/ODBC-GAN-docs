@@ -841,7 +841,7 @@
 <h1 id="ogdetectclassify_sc">og.detect.Classify_SC<a class="headerlink" href="#ogdetectclassify_sc" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Class</p>
-<p><div id = 'SC'><b>og.detect.Classify_SC(<i>n_subtypes, n_epochs=10, learning_rate=1e-5, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100</i>)</b></div></p>
+<p><div id = 'SC'><b>og.detect.Classify_SC(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100</i>)</b></div></p>
 </div>
 <p>Detect outlier cell subtypes with gene expression as SC mode of ODBC-GAN.</p>
 <p><a href="#SC">og.detect.Classify_SC</a> has one important function <a href="#fit">fit</a>. This class has been integrated in <a href="../subtype_detect/">og.subtype_detect</a> as SC mode.</p>
@@ -852,11 +852,11 @@
 <p>Number of outlier subtypes. If <code>n_subtypes='auto'</code>, ODBC-GAN will automatically determine the number of subtypes.</p>
 </li>
 <li>
-<p><strong>n_epochs</strong>: <code>int</code> (default: <code>400</code>)</p>
+<p><strong>n_epochs</strong>: <code>int</code> (default: <code>10</code>)</p>
 <p>Number of train epochs.</p>
 </li>
 <li>
-<p><strong>learning_rate</strong>: <code>float</code> (default: <code>3e-4</code>)</p>
+<p><strong>learning_rate</strong>: <code>float</code> (default: <code>1e-6</code>)</p>
 <p>Learning rate for Adam optim.</p>
 </li>
 <li>
@@ -913,7 +913,11 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><code>n_subtypes=None</code> is suitable, if and only if the number of subtypes is unknown in advance.</p>
+<ul>
+<li><code>train</code> and <code>outlier</code> should have the same genes.</li>
+<li><code>n_subtypes=None</code> is suitable, if and only if the number of subtypes is unknown in advance.</li>
+<li>If set <code>n_epochs</code> very large, consider setting <code>weight_decay &gt; 0</code>.</li>
+</ul>
 </div>
 
 

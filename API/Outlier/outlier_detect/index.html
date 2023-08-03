@@ -873,16 +873,13 @@
 <ul>
 <li>
 <p><strong>result</strong>: <code>pandas.DataFrame</code></p>
-<p>Results of outlier detection. <code>result['cell_idx']</code> contains <code>test.obs_names</code>, and <code>result['score']</code> contains the anomaly scores of every observation. </p>
+<p>Results of outlier detection. <code>result['cell_idx']</code> contains <code>test.obs_names</code>, and <code>result['score']</code> contains the anomaly scores of every observation.  </p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When testing on different datasets, it's necessary to tune hyperparameters on the default configuration for better performance results.</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul>
+<li>When testing on different datasets, it's necessary to tune hyperparameters on the default configuration for better performance results.</li>
 <li><code>train</code> and <code>test</code> should have the same genes.</li>
 <li>In SRT mode, <code>train_image</code> and <code>test_image</code> are required. And the position of every spot on image should contain in <code>train.obsm['spatial']</code> and <code>test.obsm['spatial']</code>.</li>
 </ul>

@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ogdetectclassify_srt" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -706,6 +711,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         og.detect.Classify_SRT
@@ -815,6 +822,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -829,9 +838,100 @@
                   
 
 
-  <h1>og.detect.Classify_SRT</h1>
-
-
+<h1 id="ogdetectclassify_srt">og.detect.Classify_SRT<a class="headerlink" href="#ogdetectclassify_srt" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Class</p>
+<p><div id = 'SRT'><b>og.detect.Classify_SRT(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100, patch_size=48</i>)</b></div></p>
+</div>
+<p>Detect outlier spot subtypes with gene expression, position and slice image as SRT mode of ODBC-GAN.</p>
+<p><a href="#SRT">og.detect.Classify_SRT</a> has one important function <a href="#fit">fit</a>. This class has been integrated in <a href="../subtype_detect/">og.subtype_detect</a> as SRT mode.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li>
+<p><strong>n_subtypes</strong>: <code>Union[int, Literal['auto']]</code></p>
+<p>Number of outlier subtypes. If <code>n_subtypes='auto'</code>, ODBC-GAN will automatically determine the number of subtypes.</p>
+</li>
+<li>
+<p><strong>n_epochs</strong>: <code>int</code> (default: <code>10</code>)</p>
+<p>Number of train epochs.</p>
+</li>
+<li>
+<p><strong>learning_rate</strong>: <code>float</code> (default: <code>1e-6</code>)</p>
+<p>Learning rate for Adam optim.</p>
+</li>
+<li>
+<p><strong>weight_decay</strong>: <code>float</code> (default: <code>0</code>)</p>
+<p>Weight decay for Adam optim.</p>
+</li>
+<li>
+<p><strong>alpha</strong>: <code>int</code> (default: <code>1</code>)</p>
+<p>Hyperparameter of <a href="https://www.nature.com/articles/s41467-020-15851-3">DESC loss</a>.</p>
+</li>
+<li>
+<p><strong>pretrain</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, load pretrained weight for ODBC-GAN.</p>
+</li>
+<li>
+<p><strong>GPU</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, run ODBC-GAN on GPU.</p>
+</li>
+<li>
+<p><strong>verbose</strong>: <code>bool</code> (default: <code>True</code>)</p>
+<p>If <code>True</code>, print detailed information of every epoch.</p>
+</li>
+<li>
+<p><strong>log_interval</strong>: <code>int</code> (default: <code>1</code>)</p>
+<p>Interval of epochs between two adjacent printed information.</p>
+</li>
+<li>
+<p><strong>random_state</strong>: <code>Optional[int]</code> (default: <code>100</code>)</p>
+<p>Random state to control all kinds of random seeds.</p>
+</li>
+<li>
+<p><strong>patch_size</strong>: <code>int</code> (default: <code>48</code>)</p>
+<p>Side length of every patch.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Function of <a href="#SRT">og.detect.Classify_SRT</a></p>
+<p><div id = 'fit'><b>fit(<i>z_x, res_x, z_img, res_img</i>)</b></div></p>
+</div>
+<p>Detect subtypes of outlier spots via deep clustering.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li>
+<p><strong>z_x</strong>: <code>numpy.ndarray</code></p>
+<p>Embedding of gene expression vector.</p>
+</li>
+<li>
+<p><strong>res_x</strong>: <code>numpy.ndarray</code></p>
+<p>Residual loss of gene expression vector.</p>
+</li>
+<li>
+<p><strong>z_img</strong>: <code>numpy.ndarray</code></p>
+<p>Embedding of image patch.</p>
+</li>
+<li>
+<p><strong>res_img</strong>: <code>numpy.ndarray</code></p>
+<p>Residual loss of image patch.</p>
+</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li>
+<p><strong>pred</strong>: <code>numpy.ndarray</code></p>
+<p>Predict subtype label of every outlier.</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li><code>train</code> and <code>outlier</code> should have the same genes.</li>
+<li><code>n_subtypes=None</code> is suitable, if and only if the number of subtypes is unknown in advance.</li>
+<li>If set <code>n_epochs</code> very large, consider setting <code>weight_decay &gt; 0</code>.</li>
+<li><code>train_image</code> and <code>test_image</code> are required. And the position of every spot on image should contain in <code>train.obsm['spatial']</code> and <code>test.obsm['spatial']</code>.</li>
+</ul>
+</div>
 
 
 
