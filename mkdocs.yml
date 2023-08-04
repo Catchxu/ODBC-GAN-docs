@@ -1,0 +1,117 @@
+site_name: ODBC-GAN
+site_url: https://Catchxu.github.io/OBDC-GAN-tutorial/
+site_author: Kaichen Xu
+
+theme:
+    name: "material"
+    features:
+      - announce.dismiss
+      - content.action.edit
+      - content.action.view
+      - content.code.annotate
+      - content.code.copy
+      - content.tooltips
+      - navigation.footer
+      - navigation.indexes
+      - navigation.sections
+      - navigation.tabs
+      - navigation.top
+      - navigation.tracking
+      - search.highlight
+      - search.share
+      - search.suggest
+      - toc.follow
+    favicon: 'images/favicon.ico'
+    palette:
+      - scheme: default
+        primary: black
+        accent: deep orange
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - scheme: slate
+        primary: black
+        accent: deep orange
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+    font:
+      text: Roboto
+      code: Roboto Mono
+    language: 'en'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+nav:
+  - 'Home': 'index.md'
+  - 'Installaion': 'install.md'
+
+  - 'API': 
+    - 'Overview': 'API/API_overview.md'
+    - 'Dataset': 
+      - 'og._dataset.Build_graph': 'API/Dataset/Build_graph.md'
+      - 'og._dataset.Build_multi_graph': 'API/Dataset/Build_multi_graph.md'
+    - 'Pretrain':
+      - 'og._pretrain.Pretrain_SC': 'API/Pretrain/Pretrain_SC.md'
+      - 'og._pretrain.Pretrain_SRT': 'API/Pretrain/Pretrain_SRT.md'
+      - 'og._pretrain.Pretrain_img': 'API/Pretrain/Pretrain_img.md'
+      - 'og._pretrain.Pretrain_multi': 'API/Pretrain/Pretrain_multi.md'
+    - 'Outlier Detection':
+      - 'og.outlier_detect': 'API/Outlier/outlier_detect.md'
+      - 'og.detect.Detect_SC': 'API/Outlier/Detect_SC.md'
+      - 'og.detect.Detect_SRT': 'API/Outlier/Detect_SRT.md'
+    - 'Subtype Detection':
+      - 'og.subtype_detect': 'API/Subtype/subtype_detect.md'
+      - 'og.detect.Classify_SC': 'API/Subtype/Classify_SC.md'
+      - 'og.detect.Classify_SRT': 'API/Subtype/Classify_SRT.md'
+    - 'Observation Alignment':
+      - 'og.obs_align': 'API/Align/obs_align.md'
+      - 'og.align.Align_SC': 'API/Align/Align_SC.md'
+      - 'og.align.Align_SRT': 'API/Align/Align_SRT.md'
+  
+  - 'Tutorial':
+    - 'Overview': 'Tutorial/Tutorial_overview.md'
+    - 'Tutorial 1: Detect outlier cells' : 'Tutorial/Outlier_SC.md'
