@@ -2,87 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/install/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/API_overview/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Align/Align_SC/</loc>
+         <lastmod>2023-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Align/Align_SRT/</loc>
+         <lastmod>2023-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Align/obs_align/</loc>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Dataset/Build_graph/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Dataset/Build_multi_graph/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Outlier/Detect_SC/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Outlier/Detect_SRT/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Outlier/outlier_detect/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Pretrain/Pretrain_SC/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Pretrain/Pretrain_SRT/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Pretrain/Pretrain_img/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Pretrain/Pretrain_multi/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Subtype/Classify_SC/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Subtype/Classify_SRT/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/API/Subtype/subtype_detect/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/Tutorial/Outlier_SC/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Catchxu.github.io/OBDC-GAN-tutorial/Tutorial/Tutorial_overview/</loc>
-         <lastmod>2023-08-03</lastmod>
+         <lastmod>2023-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
