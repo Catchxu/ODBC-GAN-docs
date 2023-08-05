@@ -1,7 +1,8 @@
 # og.detect.Classify_SRT
 
+<div id = 'SRT'></div>
 !!! abstract "Class"
-    <div id = 'SRT'><b>og.detect.Classify_SRT(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100, patch_size=48</i>)</b></div>
+    <b>og.detect.Classify_SRT(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100, patch_size=48</i>)</b>
 
 Detect outlier spot subtypes with gene expression, position and slice image as SRT mode of ODBC-GAN.
 
@@ -53,8 +54,9 @@ Detect outlier spot subtypes with gene expression, position and slice image as S
 
     Side length of every patch.
 
+<div id = 'fit'></div>
 !!! info "Function of [og.detect.Classify_SRT](#SRT)"
-    <div id = 'fit'><b>fit(<i>z_x, res_x, z_img, res_img</i>)</b></div>
+    <b>fit(<i>z_x, res_x, z_img, res_img</i>)</b>
 
 Detect subtypes of outlier spots via deep clustering.
 

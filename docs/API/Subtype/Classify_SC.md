@@ -1,7 +1,8 @@
 # og.detect.Classify_SC
 
+<div id = 'SC'></div>
 !!! abstract "Class"
-    <div id = 'SC'><b>og.detect.Classify_SC(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100</i>)</b></div>
+    <b>og.detect.Classify_SC(<i>n_subtypes, n_epochs=10, learning_rate=1e-6, weight_decay=0, alpha=1, pretrain=True, GPU=True, verbose=True, log_interval=1, random_state=100</i>)</b>
 
 Detect outlier cell subtypes with gene expression as SC mode of ODBC-GAN.
 
@@ -49,8 +50,9 @@ Detect outlier cell subtypes with gene expression as SC mode of ODBC-GAN.
 
     Random state to control all kinds of random seeds.
 
+<div id = 'fit'></div>
 !!! info "Function of [og.detect.Classify_SC](#SC)"
-    <div id = 'fit'><b>fit(<i>z, res</i>)</b></div>
+    <b>fit(<i>z, res</i>)</b>
 
 Detect subtypes of outlier cells via deep clustering.
 

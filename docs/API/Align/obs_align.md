@@ -31,15 +31,20 @@ Hyperparameters (`n_epochs`, `learning_rate`, and etc.) are allowed for changing
 
     Working mode of ODBC-GAN. 
 
+- **slice**: `Optional[Literal['Vertical', 'Horizontal']]` (default: `None`)
+
+    Slice type of SRT data.
+
 **Returns**:
 
-- **result**: `pandas.DataFrame`
+- **idx**: `pandas.DataFrame`
 
     Results of observations alignment. Every column contains `obs_names` in reference data and input data. Every row means the observation pairs among reference data and input data.
 
 !!! warning
     - `input` and `reference` should have the same genes.
     - In SRT mode, `input_image` and `ref_image` are required. And the position of every spot on image should contain in `input.obsm['spatial']` and `ref.obsm['spatial']`.
+    - In SRT mode, every object in `input` and `input_image` should be matched.
 
 **Example**:
 ```python

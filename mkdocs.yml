@@ -2,6 +2,9 @@ site_name: ODBC-GAN
 site_url: https://Catchxu.github.io/OBDC-GAN-tutorial/
 site_author: Kaichen Xu
 
+repo_name: Catchxu/ODBC-GAN
+repo_url: https://github.com/Catchxu/ODBC-GAN
+
 theme:
     name: "material"
     features:

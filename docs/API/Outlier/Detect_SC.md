@@ -1,7 +1,8 @@
 # og.detect.Detect_SC
 
+<div id = 'SC'></div>
 !!! abstract "Class"
-    <div id = 'SC'><b>og.detect.Detect_SC(<i>n_epochs=400, learning_rate=3e-4, sample_rate=1, mem_dim=1024, update_size=64, shrink_thres=9e-3, temperature=1, n_critic=2, pretrain=True, GPU=True, verbose=True, log_interval=100, random_state=100, weight=None</i>)</b></div>
+    <b>og.detect.Detect_SC(<i>n_epochs=400, learning_rate=3e-4, sample_rate=1, mem_dim=1024, update_size=64, shrink_thres=9e-3, temperature=1, n_critic=2, pretrain=True, GPU=True, verbose=True, log_interval=100, random_state=100, weight=None</i>)</b>
 
 Detect outlier cells with gene expression as SC mode of ODBC-GAN.
 
@@ -63,10 +64,11 @@ Detect outlier cells with gene expression as SC mode of ODBC-GAN.
 
 - **weight**: `Optional[Dict]` (default: `None`)
 
-    Weight for every part of loss. If `None`, `weight` should be set as `{'w_rec': 50, 'w_adv': 1, 'w_enc': 1, 'w_gp': 10}`
+    Weight for every part of loss. If `None`, `weight` should be set as `{'w_rec': 50, 'w_adv': 1, 'w_enc': 1, 'w_gp': 10}`.
 
+<div id = 'fit'></div>
 !!! info "Function of [og.detect.Detect_SC](#SC)"
-    <div id = 'fit'><b>fit(<i>train</i>)</b></div>
+    <b>fit(<i>train</i>)</b>
 
 Learn information of normal cells on train data by full-batch.
 
@@ -76,8 +78,9 @@ Learn information of normal cells on train data by full-batch.
 
     Train data of shape `n_obs` × `n_vars`. Rows correspond to cells and columns to genes.
 
+<div id = 'predict'></div>
 !!! info "Function of [og.detect.Detect_SC](#SC)"
-    <div id = 'predict'><b>predict(<i>test</i>)</b></div>
+    <b>predict(<i>test</i>)</b>
 
 Detect outlier cells on test data by full-batch.
 

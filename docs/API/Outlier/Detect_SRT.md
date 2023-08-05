@@ -1,7 +1,8 @@
 # og.detect.Detect_SRT
 
+<div id = 'SRT'></div>
 !!! abstract "Class"
-    <div id = 'SRT'><b>og.detect.Detect_SRT(<i>n_epochs=2, learning_rate=7e-6, sample_rate=1, mem_dim=1024, update_size=64, shrink_thres=0.5, temperature=3, n_critic=1, pretrain=True, GPU=True, verbose=True, log_interval=100, random_state=100, weight=None, batch_size=64, patch_size=48, MultiResSkips=True</i>)</b></div>
+    <b>og.detect.Detect_SRT(<i>n_epochs=2, learning_rate=7e-6, sample_rate=1, mem_dim=1024, update_size=64, shrink_thres=0.5, temperature=3, n_critic=1, pretrain=True, GPU=True, verbose=True, log_interval=100, random_state=100, weight=None, batch_size=64, patch_size=48, MultiResSkips=True</i>)</b>
 
 Detect outlier spots with gene expression, position and image as SRT mode of ODBC-GAN.
 
@@ -63,7 +64,7 @@ Detect outlier spots with gene expression, position and image as SRT mode of ODB
 
 - **weight**: `Optional[Dict]` (default: `None`)
 
-    Weight for every part of loss. If `None`, `weight` should be set as `{'w_rec': 50, 'w_adv': 1, 'w_enc': 1, 'w_gp': 10}`
+    Weight for every part of loss. If `None`, `weight` should be set as `{'w_rec': 50, 'w_adv': 1, 'w_enc': 1, 'w_gp': 10}`.
 
 - **batch_size**: `int` (default: `64`)
 
@@ -77,8 +78,9 @@ Detect outlier spots with gene expression, position and image as SRT mode of ODB
 
     If `True`, use Multi-Residual-Block Skips in image generator.
 
+<div id = 'fit'></div>
 !!! info "Function of [og.detect.Detect_SRT](#SRT)"
-    <div id = 'fit'><b>fit(<i>train, image</i>)</b></div>
+    <b>fit(<i>train, image</i>)</b>
 
 Learn information of normal spots on train data by mini-batch.
 
@@ -96,8 +98,9 @@ Every batch is a subgraph on the full graph, provided by [dgl.dataloading.DataLo
 
     H&E image of train data.
 
+<div id = 'predict'></div>
 !!! info "Function of [og.detect.Detect_SRT](#SRT)"
-    <div id = 'predict'><b>predict(<i>test</i>, image)</b></div>
+    <b>predict(<i>test</i>, image)</b>
 
 Detect outlier spots on test data by mini-batch.
 
