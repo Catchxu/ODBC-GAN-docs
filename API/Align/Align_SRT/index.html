@@ -970,7 +970,7 @@
 <div id = 'SRT'></div>
 <div class="admonition abstract">
 <p class="admonition-title">Class</p>
-<p><b>og.align.Align_SRT(<i>n_epochs=1500, learning_rate=1e-4, pretrain=True, GPU=True, verbose=True, log_interval=300, weight=None, random_state=100, fast=False</i>, slice='Vertical')</b></p>
+<p><b>og.align.Align_SRT(<i>n_epochs=1500, learning_rate=1e-4, pretrain=True, GPU=True, verbose=True, log_interval=300, weight=None, random_state=100, fast=False, slice='Vertical', patch_size=48</i>)</b></p>
 </div>
 <p>Find spot pairs with gene expression, position and slice image as SRT mode of ODBC-GAN.</p>
 <p><a href="#SRT">og.align.Align_SRT</a> has two important functions <a href="#fit">fit</a> and <a href="#fit_mult">fit_mult</a>. This class has been integrated in <a href="../obs_align/">og.obs_align</a> as SRT mode.</p>
@@ -1015,6 +1015,10 @@
 <li>
 <p><strong>slice</strong>: <code>Literal['Vertical', 'Horizontal']</code> (default: <code>'Vertical'</code>)</p>
 <p>Slice type of SRT data.</p>
+</li>
+<li>
+<p><strong>patch_size</strong>: <code>int</code> (default: <code>48</code>)</p>
+<p>Side length of every patch.</p>
 </li>
 </ul>
 <div id = 'fit'></div>
