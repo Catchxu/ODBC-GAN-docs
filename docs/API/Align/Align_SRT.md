@@ -2,7 +2,7 @@
 
 <div id = 'SRT'></div>
 !!! abstract "Class"
-    <b>og.align.Align_SRT(<i>n_epochs=1500, learning_rate=1e-4, pretrain=True, GPU=True, verbose=True, log_interval=300, weight=None, random_state=100, fast=False</i>, slice='Vertical')</b>
+    <b>og.align.Align_SRT(<i>n_epochs=1500, learning_rate=1e-4, pretrain=True, GPU=True, verbose=True, log_interval=300, weight=None, random_state=100, fast=False, slice='Vertical', patch_size=48</i>)</b>
 
 Find spot pairs with gene expression, position and slice image as SRT mode of ODBC-GAN.
 
@@ -49,6 +49,10 @@ Find spot pairs with gene expression, position and slice image as SRT mode of OD
 - **slice**: `Literal['Vertical', 'Horizontal']` (default: `'Vertical'`)
 
     Slice type of SRT data.
+
+- **patch_size**: `int` (default: `48`)
+
+    Side length of every patch.
 
 <div id = 'fit'></div>
 !!! info "Function of [og.align.Align_SRT](#SRT)"
